@@ -15,7 +15,7 @@ export default function AppContent(props: { storyStep: StoryStep }) {
                     objectFit: 'cover',
                     overflow: 'hidden'
                 }}
-            src={`https://www.youtube.com/embed/${props.storyStep.videoId}?autoplay=1&controls=0&enablejsapi=1`}
+            src={`https://www.youtube.com/embed/${props.storyStep.videoId}?autoplay=1&controls=0`}
             title="YouTube video player"
             allow="autoplay; clipboard-write; encrypted-media"
             ></iframe>}
