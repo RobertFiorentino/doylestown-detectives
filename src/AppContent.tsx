@@ -1,6 +1,7 @@
 import React from "react"
 import "./index.css"
 import { StoryStep } from './StoryStep.tsx'
+import ChoiceBox from './ChoiceBox.tsx'
 
 export default function AppContent(props: { storyStep: StoryStep }) {
 
@@ -21,6 +22,7 @@ export default function AppContent(props: { storyStep: StoryStep }) {
             ></iframe>}
             {props.storyStep.image && <img src={props.storyStep.image} className="appContent--image"/>}
             {props.storyStep.text && <h2>{props.storyStep.text}</h2>}
+            {props.storyStep.choices && <ChoiceBox choices={props.storyStep.choices} />}
         </div>
     )
 }

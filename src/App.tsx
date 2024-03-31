@@ -7,7 +7,7 @@ import { StoryStep, StoryStepType, getStoryStep } from "./StoryStep.tsx"
 
 export default function App() {
 
-    const [storyStep, setStoryStep] = React.useState<StoryStep>(getStoryStep(StoryStepType.MenuScreen))
+    const [storyStep, setStoryStep] = React.useState<StoryStep>(getStoryStep(StoryStepType.Choice))
 
     return (
         <main className="root">
