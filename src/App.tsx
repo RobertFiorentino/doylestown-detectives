@@ -9,11 +9,15 @@ export default function App() {
 
     const [storyStep, setStoryStep] = React.useState<StoryStep>(getStoryStep(StoryStepType.Choice))
 
+    function handleChoice(correctChoice: boolean) {
+        console.log(`The choice was ${correctChoice}`)
+    }
+
     return (
         <main className="root">
             <div className="app--container">
                 {storyStep.step === "menu" && <MenuScreen storyStep={storyStep} />}
-                {storyStep.step !== "menu" && <AppContent storyStep={storyStep} />}
+                {storyStep.step !== "menu" && <AppContent {...{ storyStep, handleChoice }} />}
                 {!storyStep.isNavHidden &&<NavBar />}
             </div>
         </main>

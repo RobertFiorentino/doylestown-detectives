@@ -1,10 +1,12 @@
+import { ChoiceObject } from "./ChoiceBox";
+
 export interface StoryStep {
     step: string,
     isNavHidden?: boolean,
     image?: string,
     videoId?: string,
     text?: string,
-    choices?: string[]
+    choiceObject?: ChoiceObject
 }
 
 export enum StoryStepType {
@@ -54,10 +56,13 @@ const imageTextStoryStep: StoryStep = {
 const choiceStoryStep: StoryStep = {
     step: "choice",
     text: "Look at the rainbow flag painted on the ground. What color is the fourth stripe?",
-    choices: [
-        "Red",
-        "Pink",
-        "Blue",
-        "Yellow"
-    ]
+    choiceObject: {
+        choices: [
+            "Red",
+            "Pink",
+            "Blue",
+            "Yellow"
+        ],
+        correctIndex: 1
+    }
 }

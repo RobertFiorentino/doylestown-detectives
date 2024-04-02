@@ -3,8 +3,13 @@ import "./index.css"
 import { StoryStep } from './StoryStep.tsx'
 import ChoiceBox from './ChoiceBox.tsx'
 
-export default function AppContent(props: { storyStep: StoryStep }) {
+export interface AppContentProps {
+    storyStep: StoryStep;
+    handleChoice: (correctChoice: boolean) => void;
+}
 
+export default function AppContent(props: AppContentProps) {
+    console.log('Props:', JSON.stringify(props, null, 2));
     return (
         <div className="appContent">
             {/* Consider moving video into a component */}
@@ -22,7 +27,7 @@ export default function AppContent(props: { storyStep: StoryStep }) {
             ></iframe>}
             {props.storyStep.image && <img src={props.storyStep.image} className="appContent--image"/>}
             {props.storyStep.text && <h2>{props.storyStep.text}</h2>}
-            {props.storyStep.choices && <ChoiceBox choices={props.storyStep.choices} />}
+            {props.storyStep.choiceObject && <ChoiceBox choiceObject={props.storyStep.choiceObject} handleChoice={props.handleChoice} />}
         </div>
     )
 }
