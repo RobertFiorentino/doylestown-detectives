@@ -1,4 +1,3 @@
-import React from "react"
 import "./index.css"
 import { StoryStep } from './StoryStep.tsx'
 import ChoiceBox from './ChoiceBox.tsx'

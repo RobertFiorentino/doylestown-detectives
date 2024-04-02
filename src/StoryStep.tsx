@@ -1,4 +1,4 @@
-import { ChoiceObject } from "./ChoiceBox";
+import { ChoiceObject } from "./ChoiceBox.tsx";
 
 export interface StoryStep {
     step: string,
