@@ -9,6 +9,7 @@ export interface StoryStep {
     choiceObject?: ChoiceObject
 }
 
+// TODO: change this type to be the type shown in the steps (e.g. choice) and create a new enum for premades
 export enum StoryStepType {
     MenuScreen,
     VideoImageText,

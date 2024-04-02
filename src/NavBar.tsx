@@ -1,17 +1,18 @@
-import React from "react"
 import "./index.css"
 
-export default function NavBar() {
+interface NavBarProps {
+    handleOk: () => void;
+    handleBack: () => void;
+    // todo: add help and exit
+}
 
-    function ok() {
-        console.log("ok!")
-    }
+export default function NavBar({ handleOk, handleBack}: NavBarProps) {
 
     return (
         <nav className="navBar">
-            <button onClick={ok}>OK</button>
+            <button onClick={handleOk}>OK</button>
             <div className="navBar--bottom-container">
-                <button>BACK</button>
+                <button onClick={handleBack}>BACK</button>
                 <button>HELP</button>
                 <button>EXIT</button>
             </div>
