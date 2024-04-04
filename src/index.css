@@ -3,12 +3,24 @@ body {
     font-family: Verdana, sans-serif;
     font-size: .75em;
     user-select: none;
+    background: tan;
+    height: -webkit-fill-available;
+}
+
+html {
+    height: -webkit-fill-available;
+}
+
+button {
+    border-radius: 5px;
+    border: none;
+    font-family: Verdana, sans-serif;
 }
 
 .app--container {
     display: flex;
     flex-direction: column;
-    max-width: 320px;
+    max-width: 480px;
     margin: auto;
     background: red;
     height: 100vh;
@@ -45,8 +57,6 @@ body {
     height: 50px;
     width: 80%;
     align-self: center;
-    border-radius: 5px;
-    font-family: Verdana, sans-serif;
     white-space: pre-line;
 }
 
@@ -68,7 +78,7 @@ body {
 
 .navBar {
     background: yellow;
-    height: 100px;
+    height: 120px;
     width: 100%;
     max-width: 100%;
     bottom: 0;
@@ -76,6 +86,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding-bottom: 20px;
 }
 
 .navBar--bottom-container {
@@ -86,8 +97,8 @@ body {
 }
 
 .navBar button {
-    width: 80px;
-    height: 30px;
+    width: 100px;
+    height: 40px;
     align-self: center;
 }
 
@@ -113,8 +124,6 @@ body {
 }
 
 .choiceBox .choice--button {
-    border-radius: 5px;
     height: 40px;
-    font-family: Verdana, sans-serif;
     font-size: 1.5em;
 }
