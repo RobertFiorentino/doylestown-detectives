@@ -127,3 +127,16 @@ button {
     height: 40px;
     font-size: 1.5em;
 }
+
+.tileGame--container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 100px;
+}
+
+.tileGame--button {
+    height: 60px;
+    width: 60px;
+    font-size: 2em;
+}

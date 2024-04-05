@@ -1,4 +1,5 @@
 import { ChoiceObject } from "./ChoiceBox.tsx";
+import { TileGameObject } from "./TileGame.tsx"
 
 export interface StoryStep {
     step: string,
@@ -6,7 +7,8 @@ export interface StoryStep {
     image?: string,
     videoId?: string,
     text?: string,
-    choiceObject?: ChoiceObject
+    choiceObject?: ChoiceObject,
+    tileGameObject?: TileGameObject
 }
 
 // TODO: change this type to be the type shown in the steps (e.g. choice) and create a new enum for premades
@@ -14,7 +16,8 @@ export enum StoryStepType {
     MenuScreen,
     VideoImageText,
     ImageText,
-    Choice
+    Choice,
+    TileGame
 }
 
 export function getStoryStep(storyStep: StoryStepType): StoryStep {
@@ -31,6 +34,9 @@ export function getStoryStep(storyStep: StoryStepType): StoryStep {
             break;
         case StoryStepType.Choice:
             return choiceStoryStep;
+            break;
+        case StoryStepType.TileGame:
+            return tileGameStoryStep;
             break;
     }
 }
@@ -65,5 +71,14 @@ const choiceStoryStep: StoryStep = {
             "Yellow"
         ],
         correctIndex: 1
+    }
+}
+
+const tileGameStoryStep: StoryStep = {
+    step: "tile-code",
+    text: "Touch the numbers on the screen to enter the year the Historical Society made this monument",
+    tileGameObject: {
+        startingCombination: [1, 9, 6, 8],
+        correctCombination: [1, 9, 6, 9]
     }
 }
