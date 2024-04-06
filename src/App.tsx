@@ -8,7 +8,6 @@ import { sampleMission, Mission } from "./Mission.tsx"
 
 export default function App() {
 
-    //const [storyStep, setStoryStep] = React.useState<StoryStep>(getStoryStep(StoryStepType.Choice))
     // TODO: Pull mission from MenuScreen select
     const [mission, setMission] = useState<Mission>(() => sampleMission);
 
@@ -28,11 +27,15 @@ export default function App() {
         setMission({ ...mission});
     }
 
+    const style = currentStoryStep.centerVertically ? { justifyContent: 'center' } : {}
+
     return (
         <main className="root">
             <div className="app--container">
                 {currentStoryStep.step === "menu" && <MenuScreen storyStep={currentStoryStep} />}
-                {currentStoryStep.step !== "menu" && <AppContent {...{ storyStep: currentStoryStep, handleChoice }} />}
+                <div className="app--content-container" style={style}>
+                    {currentStoryStep.step !== "menu" && <AppContent {...{ storyStep: currentStoryStep, handleChoice }} />}
+                </div>
                 {!currentStoryStep.isNavHidden &&<NavBar handleOk={handleOk} handleBack={handleBack}/>}
             </div>
         </main>

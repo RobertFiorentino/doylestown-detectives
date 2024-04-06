@@ -31,6 +31,8 @@ export function createMission(steps: StoryStep[]): Mission {
 export const sampleMission = createMission(
     [
         getStoryStep(StoryStepType.ImageText),
+        getStoryStep(StoryStepType.Choice),
+        getStoryStep(StoryStepType.VideoImageText),
         getStoryStep(StoryStepType.TileGame)
     ]
 )

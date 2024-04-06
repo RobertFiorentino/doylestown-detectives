@@ -3,6 +3,7 @@ import { TileGameObject } from "./TileGame.tsx"
 
 export interface StoryStep {
     step: string,
+    centerVertically?: boolean,
     isNavHidden?: boolean,
     image?: string,
     videoId?: string,
@@ -75,7 +76,8 @@ const choiceStoryStep: StoryStep = {
 }
 
 const tileGameStoryStep: StoryStep = {
-    step: "tile-code",
+    step: "tile-game",
+    centerVertically: true,
     text: "Touch the numbers on the screen to enter the year the Historical Society made this monument",
     tileGameObject: {
         startingCombination: [1, 9, 6, 8],
