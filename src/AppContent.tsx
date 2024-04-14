@@ -25,7 +25,7 @@ export default function AppContent(props: AppContentProps) {
                 title="YouTube video player"
                 allow="autoplay; clipboard-write; encrypted-media"
             ></iframe>}
-            {props.storyStep.image && <img src={props.storyStep.image} className="appContent--image" />}
+            {props.storyStep.image && <img src={`/images/${props.storyStep.image}`} className="appContent--image" />}
             {props.storyStep.tileGameObject && <TileGame tileGameObject={props.storyStep.tileGameObject} />}
             {props.storyStep.text && <h2>{props.storyStep.text}</h2>}
             {props.storyStep.choiceObject && <ChoiceBox choiceObject={props.storyStep.choiceObject} handleChoice={props.handleChoice} />}

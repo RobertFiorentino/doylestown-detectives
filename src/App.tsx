@@ -4,20 +4,24 @@ import NavBar from "./NavBar.tsx"
 import AppContent from "./AppContent.tsx"
 import MenuScreen from "./MenuScreen.tsx"
 //import { StoryStep, StoryStepType, getStoryStep } from "./StoryStep.tsx"
-import { sampleMission, Mission } from "./Mission.tsx"
+import { Mission, libraryMission } from "./Mission.tsx"
 
 export default function App() {
 
     // TODO: Pull mission from MenuScreen select
-    const [mission, setMission] = useState<Mission>(() => sampleMission);
+    const [mission, setMission] = useState<Mission>(() => libraryMission);
 
     const currentStoryStep = mission.getCurrentStep();
 
     function handleChoice(correctChoice: boolean) {
         console.log(`The choice was ${correctChoice}`)
+        if (correctChoice) {
+            handleOk()
+        }
     }
 
     function handleOk() {
+        // TODO: Add skip logic
         mission.goToNextStep();
         setMission({ ...mission});
     }
