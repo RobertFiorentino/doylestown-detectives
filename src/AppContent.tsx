@@ -6,13 +6,14 @@ import TileGame from './TileGame.tsx'
 export interface AppContentProps {
     storyStep: StoryStep;
     handleChoice: (correctChoice: boolean) => void;
+    handleWinning: (replaceText: boolean) => void;
 }
 
 export default function AppContent(props: AppContentProps) {
     console.log('Props:', JSON.stringify(props, null, 2));
     return (
         <div className="appContent">
-            {/* Consider moving video into a component */}
+            {/* TODO: Move to a component when reworking video */}
             {props.storyStep.videoId && <iframe
                 style={{
                     position: 'relative',
@@ -26,7 +27,7 @@ export default function AppContent(props: AppContentProps) {
                 allow="autoplay; clipboard-write; encrypted-media"
             ></iframe>}
             {props.storyStep.image && <img src={`/images/${props.storyStep.image}`} className="appContent--image" />}
-            {props.storyStep.tileGameObject && <TileGame tileGameObject={props.storyStep.tileGameObject} />}
+            {props.storyStep.tileGameObject && <TileGame tileGameObject={props.storyStep.tileGameObject} handleWinning={props.handleWinning} />}
             {props.storyStep.text && <h2>{props.storyStep.text}</h2>}
             {props.storyStep.choiceObject && <ChoiceBox choiceObject={props.storyStep.choiceObject} handleChoice={props.handleChoice} />}
         </div>

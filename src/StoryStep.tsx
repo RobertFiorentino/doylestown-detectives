@@ -5,9 +5,11 @@ export interface StoryStep {
     step: string,
     centerVertically?: boolean,
     isNavHidden?: boolean,
+    disableOk?: boolean,
     image?: string,
     videoId?: string,
     text?: string,
+    winningText?: string,
     choiceObject?: ChoiceObject,
     tileGameObject?: TileGameObject
 }

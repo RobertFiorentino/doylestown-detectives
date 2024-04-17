@@ -8,8 +8,13 @@ export interface TileGameObject {
     correctCombination: TileValue[];
 }
 
+export interface TileGameProps {
+    tileGameObject: TileGameObject;
+    handleWinning: (replaceText: boolean) => void;
+}
+
 // TODO: Test out string and image tiles
-export default function TileGame({ tileGameObject }: { tileGameObject: TileGameObject }) {
+export default function TileGame({ tileGameObject, handleWinning }: TileGameProps) {
 
     // All possible options for the tiles
     const [tileValues] = useState<Array<TileValue>>(
@@ -22,15 +27,13 @@ export default function TileGame({ tileGameObject }: { tileGameObject: TileGameO
             : [...tileValues, ...Array.from({ length: tileGameObject.correctCombination.length - tileValues.length }, (_, i) => tileValues[i % tileValues.length])]
     );
 
-    const [isGameWon, setIsGameWon] = useState(false);
-
     function handleTap(index: number) {
         setDisplayedValues((prevDisplayedValues) => {
             const nextIndex = (prevDisplayedValues[index] === tileValues[tileValues.length - 1]) ? 0 : tileValues.indexOf(prevDisplayedValues[index]) + 1;
             const updatedDisplayedValues = [...prevDisplayedValues];
             updatedDisplayedValues[index] = tileValues[nextIndex];
             if (JSON.stringify(updatedDisplayedValues) === JSON.stringify(tileGameObject.correctCombination)) {
-                setIsGameWon(true);
+                handleWinning(true)
             }
             return updatedDisplayedValues;
         });
@@ -47,7 +50,6 @@ export default function TileGame({ tileGameObject }: { tileGameObject: TileGameO
     return (
         <div className="tileGame--container">
             {renderTiles()}
-            {isGameWon && <div className="win-message">Congratulations! You've won!</div>}
         </div>
     )
 }
