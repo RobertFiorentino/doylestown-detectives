@@ -22,7 +22,7 @@ button {
     flex-direction: column;
     max-width: 480px;
     margin: auto;
-    background: #FC9B86;
+    /*background: #FC9B86;*/
     height: 100vh;
     position: relative;
 }
@@ -85,7 +85,7 @@ button {
 }
 
 .navBar {
-    background: #F8F27F;
+    /*background: #F8F27F;*/
     height: 120px;
     width: 100%;
     max-width: 100%;
@@ -104,14 +104,28 @@ button {
     padding: 0 10px;
 }
 
-.navBar button {
+.navBar--text-button {
     width: 100px;
     height: 40px;
     align-self: center;
 }
 
+.navBar--round-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f0f0f0;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
 .appContent {
-    background: #6FCBE2;
+    /*background: #6FCBE2;*/
     display: flex;
     flex-direction: column;
     max-width: 100%;
@@ -122,7 +136,6 @@ button {
 
 .appContent--image {
     border-radius: 10px;
-    margin: 0 20px;
 }
 
 .choiceBox {
@@ -147,4 +160,35 @@ button {
     height: 60px;
     width: 60px;
     font-size: 2em;
+}
+
+.interstitialScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.interstitial--overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.interstitial--content {
+    z-index: 10000;
+    background-color: white;
+    padding: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 8px;
+    text-align: center;
 }

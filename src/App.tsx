@@ -3,7 +3,7 @@ import "./index.css"
 import NavBar from "./NavBar.tsx"
 import AppContent from "./AppContent.tsx"
 import MenuScreen from "./MenuScreen.tsx"
-//import { StoryStep, StoryStepType, getStoryStep } from "./StoryStep.tsx"
+import InterstitialScreen from "./InterstitialScreen.tsx";
 import { Mission, libraryMission } from "./Mission.tsx"
 
 export default function App() {
@@ -13,14 +13,19 @@ export default function App() {
 
     const [answeredCorrectly, setAnsweredCorrectly] = useState(false);
 
+    const [showInterstitial, setShowInterstitial] = useState(false);
+
     const currentStoryStep = mission.getCurrentStep();
 
     const style = currentStoryStep.centerVertically ? { justifyContent: 'center' } : {}
 
     const disableOk = currentStoryStep.disableOk ||
+               currentStoryStep.step === "video" ||
             ((currentStoryStep.step === "choice" || currentStoryStep.step === "tile-game") && !answeredCorrectly)
 
-    // TOOD: add showingInterstitial variable
+    const handleSkip = currentStoryStep.step === "video" ? handleOk : null;
+
+    const [interstitialText, setInterstitialText] = useState("")
 
     // TODO: save state to device and pull from there
 
@@ -29,6 +34,9 @@ export default function App() {
         if (correctChoice) {
             setAnsweredCorrectly(true)
             handleOk()
+        } else {
+            setInterstitialText("That answer is incorrect. Do not guess - press the Back button to see the question again or the Help button if you need a hint.")
+            toggleInterstitial()
         }
     }
 
@@ -40,7 +48,6 @@ export default function App() {
     }
 
     function handleOk() {
-        // TODO: Add skip logic
         // TODO: Go back to menu or something on the last step of the missions
         mission.goToNextStep();
         updateCurrentMission()
@@ -51,20 +58,38 @@ export default function App() {
         updateCurrentMission()
     }
 
+    function handleHelp() {
+        setInterstitialText(currentStoryStep.helpText ?? "Go back to the last step or ask a library worker for directions to the section you're looking for.")
+        toggleInterstitial()
+    }
+
+    function handleExit() {
+        // TODO
+    }
+
     function updateCurrentMission() {
         setMission({ ...mission});
         setAnsweredCorrectly(false)
     }
 
+    function toggleInterstitial() {
+        setShowInterstitial(!showInterstitial);
+    }
+
     return (
         <main className="root">
             <div className="app--container">
-                {/* TODO: add showingInterstitial for help/wrong answer logic similar to menuscreen logic */}
+                {showInterstitial && <InterstitialScreen onClose={toggleInterstitial} text={interstitialText} />}
                 {currentStoryStep.step === "menu" && <MenuScreen storyStep={currentStoryStep} />}
                 <div className="app--content-container" style={style}>
                     {currentStoryStep.step !== "menu" && <AppContent {...{ storyStep: currentStoryStep, handleChoice, handleWinning }} />}
                 </div>
-                {!currentStoryStep.isNavHidden &&<NavBar handleOk={handleOk} handleBack={handleBack} disableOk={disableOk}/>}
+                {!currentStoryStep.isNavHidden &&<NavBar handleOk={handleOk}
+                                                         handleBack={mission.currentStepIndex != 0 ? handleBack : undefined}
+                                                         handleSkip={handleSkip ?? undefined}
+                                                         handleHelp={currentStoryStep.helpText ? handleHelp : undefined}
+                                                         handleExit={handleExit}
+                                                         disableOk={disableOk}/>}
             </div>
         </main>
     )

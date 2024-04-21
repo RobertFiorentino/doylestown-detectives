@@ -83,7 +83,8 @@ export const libraryMission = createMission(
         {
             step: "image",
             image: "penny_machine_far.jpg",
-            text: "Go near the library entrance to the Press A Penny machine."
+            text: "Go near the library entrance to the Press A Penny machine.",
+            helpText: "Go to the main library entrance facing the Mercer Museum castle."
         },
         {
             step: "image",

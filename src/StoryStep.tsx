@@ -10,6 +10,7 @@ export interface StoryStep {
     videoId?: string,
     text?: string,
     winningText?: string,
+    helpText?: string,
     choiceObject?: ChoiceObject,
     tileGameObject?: TileGameObject
 }
