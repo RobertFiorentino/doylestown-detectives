@@ -2,6 +2,7 @@ import "./index.css"
 import { StoryStep } from './StoryStep.tsx'
 import ChoiceBox from './ChoiceBox.tsx'
 import TileGame from './TileGame.tsx'
+import Video from './Video.tsx'
 
 export interface AppContentProps {
     storyStep: StoryStep;
@@ -13,19 +14,7 @@ export default function AppContent(props: AppContentProps) {
     console.log('Props:', JSON.stringify(props, null, 2));
     return (
         <div className="appContent">
-            {/* TODO: Move to a component when reworking video */}
-            {props.storyStep.videoId && <iframe
-                style={{
-                    position: 'relative',
-                    width: '100%',
-                    height: '200px',
-                    objectFit: 'cover',
-                    overflow: 'hidden'
-                }}
-                src={`https://www.youtube.com/embed/${props.storyStep.videoId}?autoplay=1&controls=0`}
-                title="YouTube video player"
-                allow="autoplay; clipboard-write; encrypted-media"
-            ></iframe>}
+            {props.storyStep.video && <Video videoSource={props.storyStep.video.videoSource} subtitles={props.storyStep.video.subtitles} />}
             {props.storyStep.image && <img src={`/images/${props.storyStep.image}`} className="appContent--image" />}
             {props.storyStep.tileGameObject && <TileGame tileGameObject={props.storyStep.tileGameObject} handleWinning={props.handleWinning} />}
             {props.storyStep.text && <h2>{props.storyStep.text}</h2>}

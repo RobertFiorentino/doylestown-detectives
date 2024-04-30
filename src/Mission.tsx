@@ -41,15 +41,37 @@ export const libraryMission = createMission(
     [
         {
             step: "video",
-            videoId: "placeholder",
-            text: "placeholder - intro video"
+            video: {
+                videoSource: "Library-Scene-1.mp4",
+                subtitles: [
+                    { startTime: 3, endTime: 5, text: "Aaaachoo!" },
+                    { startTime: 6, endTime: 8.2, text: "Finn! Can you cover your mouth?" },
+                    { startTime: 8.4, endTime: 11.3, text: "I'm sorry my allergies are killing me right now." },
+                    { startTime: 11.3, endTime: 13.8, text: "Let's return your overdue books and get out of here." },
+                    { startTime: 14, endTime: 15.8, text: "Yeah...it might take a bit." },
+                    { startTime: 19, endTime: 20, text: "Excusez moi." },
+                    { startTime: 20, endTime: 21.5, text: "Aaaachoo!" },
+                    { startTime: 22, endTime: 23.5, text: "Thank you for your service." },
+                    { startTime: 23.6, endTime: 26.7, text: "Hold on mister. You have late fees!" },
+                    { startTime: 29.5, endTime: 30.5, text: "WOAH!" },
+                    { startTime: 31, endTime: 32.7, text: "That's more than my allowance." },
+                    { startTime: 33, endTime: 36, text: "That's more than your allowance for 2.7 years." },
+                    { startTime: 36.2, endTime: 38.2, text: "Hey, can we work something out?" },
+                    { startTime: 38.3, endTime: 40.4, text: "Are there any mysteries you need solved?" },
+                    { startTime: 40.5, endTime: 42.2, text: "Well now that you mention it..." },
+                    { startTime: 42.2, endTime: 44.7, text: "There has been a string of vandalism here lately." },
+                    { startTime: 45, endTime: 47.6, text: "But how could you help? Who are you?" },
+                    { startTime: 48, endTime: 49.1, text: "We're..." },
+                    { startTime: 49.2, endTime: 53.5, text: "THE DOYLESTOWN DETECTIVES!" }
+                  ]
+            }
         },
         {
             step: "image",
             image: "placeholder"
         },        {
             step: "video",
-            videoId: "placeholder",
+            //videoId: "placeholder",
             text: "placeholder - explain case"
         },
         {
@@ -77,7 +99,7 @@ export const libraryMission = createMission(
         },
         {
             step: "video",
-            videoId: "",
+            //videoId: "",
             text: "placeholder - finds honey!"
         },
         {
@@ -106,7 +128,7 @@ export const libraryMission = createMission(
         },
         {
             step: "video",
-            videoId: "",
+            //videoId: "",
             text: "placeholder - finds magazine"
         },
         {
@@ -116,7 +138,7 @@ export const libraryMission = createMission(
         },
         {
             step: "video",
-            videoId: "",
+            //videoId: "",
             text: "placeholder - notices shelf"
         },
         {
@@ -146,7 +168,7 @@ export const libraryMission = createMission(
         },
         {
             step: "video",
-            videoId: "",
+            //videoId: "",
             text: "placeholder - finds book"
         },
         {
@@ -174,7 +196,7 @@ export const libraryMission = createMission(
         },
         {
             step: "video",
-            videoId: "",
+            //videoId: "",
             text: "placeholder - finale"
         },
         {

@@ -1,5 +1,6 @@
-import { ChoiceObject } from "./ChoiceBox.tsx";
+import { ChoiceObject } from "./ChoiceBox.tsx"
 import { TileGameObject } from "./TileGame.tsx"
+import { VideoProps } from "./Video.tsx"
 
 export interface StoryStep {
     step: string,
@@ -7,7 +8,7 @@ export interface StoryStep {
     isNavHidden?: boolean,
     disableOk?: boolean,
     image?: string,
-    videoId?: string,
+    video?: VideoProps,
     text?: string,
     winningText?: string,
     helpText?: string,
@@ -54,7 +55,9 @@ const menuScreenStoryStep: StoryStep = {
 const videoImageTextStoryStep: StoryStep = {
     step: "video",
     image: "https://tapinto-production.s3.amazonaws.com/uploads/articles/im/best_crop_fe6a7fc41e67683a6201_IMG_9780.JPG",
-    videoId: "i3JqgCmjLsk",
+    video: {
+       videoSource: "Library-Scene-2.mp4"
+    },
     text: "Travel to Evolution Candy and press the OK button to contact the detectives."
 }
 
