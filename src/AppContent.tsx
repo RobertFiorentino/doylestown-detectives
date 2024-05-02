@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import "./index.css"
 import { StoryStep } from './StoryStep.tsx'
 import ChoiceBox from './ChoiceBox.tsx'
@@ -13,6 +14,18 @@ export interface AppContentProps {
 
 export default function AppContent(props: AppContentProps) {
     console.log('Props:', JSON.stringify(props, null, 2));
+
+    useEffect(() => {
+        if (props.storyStep.music) {
+            const audio = new Audio(`/music/${props.storyStep.music}`);
+            audio.play();
+            return () => {
+                audio.pause();
+                audio.src = '';
+            };
+        }
+    }, [props.storyStep.music]);
+
     return (
         <div className="appContent">
             {props.storyStep.video && <Video videoSource={props.storyStep.video.videoSource}

@@ -12,6 +12,7 @@ export interface StoryStep {
     text?: string,
     winningText?: string,
     helpText?: string,
+    music?: string,
     choiceObject?: ChoiceObject,
     tileGameObject?: TileGameObject
 }

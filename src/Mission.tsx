@@ -68,7 +68,8 @@ export const libraryMission = createMission(
         },
         {
             step: "image",
-            image: "placeholder"
+            image: "placeholder",
+            music: "Mission-Theme.mp3"
         },        {
             step: "video",
             video: {
