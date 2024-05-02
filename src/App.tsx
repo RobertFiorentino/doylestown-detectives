@@ -82,7 +82,7 @@ export default function App() {
                 {showInterstitial && <InterstitialScreen onClose={toggleInterstitial} text={interstitialText} />}
                 {currentStoryStep.step === "menu" && <MenuScreen storyStep={currentStoryStep} />}
                 <div className="app--content-container" style={style}>
-                    {currentStoryStep.step !== "menu" && <AppContent {...{ storyStep: currentStoryStep, handleChoice, handleWinning }} />}
+                    {currentStoryStep.step !== "menu" && <AppContent {...{ storyStep: currentStoryStep, handleChoice, handleWinning, goToNextStep: handleOk }} />}
                 </div>
                 {!currentStoryStep.isNavHidden &&<NavBar handleOk={handleOk}
                                                          handleBack={mission.currentStepIndex != 0 ? handleBack : undefined}

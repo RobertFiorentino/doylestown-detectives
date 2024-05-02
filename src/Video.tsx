@@ -9,10 +9,11 @@ export interface Subtitle {
 
 export interface VideoProps {
     videoSource: string,
-    subtitles?: Subtitle[]
+    subtitles?: Subtitle[],
+    handleVideoEnding?: () => void | null
 }
 
-export default function Video({ videoSource, subtitles }: VideoProps) {
+export default function Video({ videoSource, subtitles, handleVideoEnding }: VideoProps) {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [currentSubtitle, setCurrentSubtitle] = useState("")
     const [isPaused, setIsPaused] = useState(false)
@@ -23,6 +24,10 @@ export default function Video({ videoSource, subtitles }: VideoProps) {
             currentTime >= sub.startTime && currentTime <= sub.endTime
         );
         setCurrentSubtitle(subtitle ? subtitle.text : '')
+
+        if (videoRef.current?.ended) {
+            handleVideoEnding && handleVideoEnding()
+        }
     }
 
     const handleVideoClick = () => {

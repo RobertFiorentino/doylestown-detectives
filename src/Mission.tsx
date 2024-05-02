@@ -71,8 +71,18 @@ export const libraryMission = createMission(
             image: "placeholder"
         },        {
             step: "video",
-            //videoId: "placeholder",
-            text: "placeholder - explain case"
+            video: {
+                videoSource: "Library-Scene-2.mp4",
+                subtitles: [
+                    { startTime: 2.7, endTime: 4, text: "Ummm...." },
+                    { startTime: 4, endTime: 5.7, text: "Ok..." },
+                    { startTime: 5.7, endTime: 8.5, text: "Someone has been destroying the artwork around the library." },
+                    { startTime: 8.5, endTime: 12, text: "If you can figure out who, we'll call it even on the late fees." },
+                    { startTime: 12.1, endTime: 14.6, text: "The Doylestown Detectives are on it!" },
+                    { startTime: 14.8, endTime: 16.9, text: "Do you have any clues?" },
+                    { startTime: 17, endTime: 21, text: "Take a look at the ladybugs and bees. It's a mess over there!" }
+                  ]
+            }
         },
         {
             step: "image",
