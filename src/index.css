@@ -16,7 +16,13 @@ button {
     border-radius: 5px;
     border: none;
     font-family: Verdana, sans-serif;
+    color: black;
 }
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 
 .app--container {
     display: flex;

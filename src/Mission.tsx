@@ -57,7 +57,7 @@ export const libraryMission = createMission(
                     { startTime: 31, endTime: 32.7, text: "That's more than my allowance." },
                     { startTime: 33, endTime: 36, text: "That's more than your allowance for 2.7 years." },
                     { startTime: 36.2, endTime: 38.2, text: "Hey, can we work something out?" },
-                    { startTime: 38.3, endTime: 40.4, text: "Are there any mysteries you need solved?" },
+                    { startTime: 38.3, endTime: 40.2, text: "Are there any mysteries you need solved?" },
                     { startTime: 40.5, endTime: 42.2, text: "Well now that you mention it..." },
                     { startTime: 42.2, endTime: 44.7, text: "There has been a string of vandalism here lately." },
                     { startTime: 45, endTime: 47.6, text: "But how could you help? Who are you?" },
@@ -110,8 +110,9 @@ export const libraryMission = createMission(
         },
         {
             step: "video",
-            //videoId: "",
-            text: "placeholder - finds honey!"
+            video: {
+                videoSource: "tempscene.mp4"
+            }
         },
         {
             step: "image",

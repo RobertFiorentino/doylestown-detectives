@@ -26,12 +26,18 @@ export default function AppContent(props: AppContentProps) {
         }
     }, [props.storyStep.music]);
 
+    const handleImageClick = () => {
+        if (!props.storyStep.suppressGoToNextStep) {
+            props.goToNextStep && props.goToNextStep(); // Check if goToNextStep is provided before calling it
+        }
+    };
+
     return (
         <div className="appContent">
             {props.storyStep.video && <Video videoSource={props.storyStep.video.videoSource}
                                              subtitles={props.storyStep.video.subtitles}
-                                             handleVideoEnding={props.goToNextStep} />}
-            {props.storyStep.image && <img src={`/images/${props.storyStep.image}`} className="appContent--image" />}
+                                             handleVideoEnding={props.storyStep.suppressGoToNextStep ? undefined : props.goToNextStep} />}
+            {props.storyStep.image && <img src={`/images/${props.storyStep.image}`} className="appContent--image" onClick={handleImageClick} />}
             {props.storyStep.tileGameObject && <TileGame tileGameObject={props.storyStep.tileGameObject} handleWinning={props.handleWinning} />}
             {props.storyStep.text && <h2>{props.storyStep.text}</h2>}
             {props.storyStep.choiceObject && <ChoiceBox choiceObject={props.storyStep.choiceObject} handleChoice={props.handleChoice} />}

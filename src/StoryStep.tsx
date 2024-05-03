@@ -14,7 +14,8 @@ export interface StoryStep {
     helpText?: string,
     music?: string,
     choiceObject?: ChoiceObject,
-    tileGameObject?: TileGameObject
+    tileGameObject?: TileGameObject,
+    suppressGoToNextStep?: boolean
 }
 
 // TODO: change this type to be the type shown in the steps (e.g. choice) and create a new enum for premades
