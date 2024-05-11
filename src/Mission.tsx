@@ -111,7 +111,25 @@ export const libraryMission = createMission(
         {
             step: "video",
             video: {
-                videoSource: "tempscene.mp4"
+                videoSource: "Library-Scene-3.mp4",
+                subtitles: [
+                    { startTime: 2.5, endTime: 3.3, text: "Ummm...." },
+                    { startTime: 3.8, endTime: 5.3, text: "These kids look pretty sus." },
+                    { startTime: 5.3, endTime: 7.2, text: "There must be more clues..." },
+                    { startTime: 8.0, endTime: 10.7, text: "Freeze! Where were you the night of the 18th?!" },
+                    { startTime: 11.1, endTime: 14.5, text: "I'm this many yeows old!" },
+                    { startTime: 15, endTime: 16.8, text: "...Likely story." },
+                    { startTime: 17.0, endTime: 19.7, text: "Stop hassling babies. Look at this!" },
+                    { startTime: 19.8, endTime: 21.7, text: "Is that...glue?" },
+                    { startTime: 22.0, endTime: 24.7, text: "No, it came from the bee statue. It's honey!" },
+                    { startTime: 25.1, endTime: 27.3, text: "Well that's one thing you're not allergic to." },
+                    { startTime: 27.6, endTime: 31.2, text: "You're right, I stopped sneezing. Hmmm..." },
+                    { startTime: 31.3, endTime: 33.5, text: "Hey look! There's a trail." },
+                    { startTime: 33.5, endTime: 35.2, text: "Guess the crook didn't eat all the honey." },
+                    { startTime: 35.3, endTime: 40, text: "Maybe he's not eating it at all. Let's follow that trail to the front entrance." },
+                    { startTime: 40.6, endTime: 43.1, text: "And hey! I've got my eye on you." },
+                    { startTime: 43.3, endTime: 47, text: "I'm a pwincess!" }
+                  ]
             }
         },
         {
