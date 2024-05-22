@@ -1,12 +1,18 @@
 import React from "react"
 import "./index.css"
 import { StoryStep } from './StoryStep.tsx'
+import { Mission, libraryMission } from "./Mission.tsx"
 
-export default function MenuScreen(props: { storyStep: StoryStep }) {
+interface MenuScreenProps {
+    storyStep: StoryStep;
+    handleClick: (mission: Mission) => void | null;
+}
+
+export default function MenuScreen({ storyStep, handleClick }: MenuScreenProps) {
 
     return (
         <div className="menuScreen">
-            {props.storyStep.text && <h2>{props.storyStep.text}</h2>}
+            {storyStep.text && <h2>{storyStep.text}</h2>}
             <div className="menu--container">
                 <div className="menu--container--buttons">
                     <ButtonWithSubheading
@@ -18,9 +24,9 @@ export default function MenuScreen(props: { storyStep: StoryStep }) {
                         subheadingText="Mercer's Museum, Michener, Library"
                         onClick={() => console.log("mercer's mystery")} />
                     <ButtonWithSubheading
-                        buttonText="Book It!"
+                        buttonText="The Library Litterbug!"
                         subheadingText="Doylestown Library"
-                        onClick={() => console.log("book it")} />
+                        onClick={() => handleClick(libraryMission)} />
                 </div>
                 <div className="menu--container--bottom">
                     <button className="menu--bottom-button">Contact Us!</button>

@@ -4,12 +4,11 @@ import NavBar from "./NavBar.tsx"
 import AppContent from "./AppContent.tsx"
 import MenuScreen from "./MenuScreen.tsx"
 import InterstitialScreen from "./InterstitialScreen.tsx";
-import { Mission, libraryMission } from "./Mission.tsx"
+import { Mission, menuMission } from "./Mission.tsx"
 
 export default function App() {
 
-    // TODO: Pull mission from MenuScreen select
-    const [mission, setMission] = useState<Mission>(() => libraryMission);
+    const [mission, setMission] = useState<Mission>(() => menuMission);
 
     const [answeredCorrectly, setAnsweredCorrectly] = useState(false);
 
@@ -49,8 +48,13 @@ export default function App() {
 
     function handleOk() {
         // TODO: Go back to menu or something on the last step of the missions
-        mission.goToNextStep();
-        updateCurrentMission()
+        console.log(`currentstepindex: ${mission.currentStepIndex}, stepsLength: ${mission.steps.length}`)
+        if (mission.currentStepIndex >= mission.steps.length - 1) {
+            handleExit()
+        } else {
+            mission.goToNextStep();
+            updateCurrentMission()
+        }
     }
 
     function handleBack() {
@@ -64,7 +68,7 @@ export default function App() {
     }
 
     function handleExit() {
-        // TODO
+        setMission(menuMission)
     }
 
     function updateCurrentMission() {
@@ -76,11 +80,15 @@ export default function App() {
         setShowInterstitial(!showInterstitial);
     }
 
+    function chooseMission(mission: Mission) {
+        setMission(mission)
+    }
+
     return (
         <main className="root">
             <div className="app--container">
                 {showInterstitial && <InterstitialScreen onClose={toggleInterstitial} text={interstitialText} />}
-                {currentStoryStep.step === "menu" && <MenuScreen storyStep={currentStoryStep} />}
+                {currentStoryStep.step === "menu" && <MenuScreen storyStep={currentStoryStep} handleClick={chooseMission} />}
                 <div className="app--content-container" style={style}>
                     {currentStoryStep.step !== "menu" && <AppContent {...{ storyStep: currentStoryStep, handleChoice, handleWinning, goToNextStep: handleOk }} />}
                 </div>

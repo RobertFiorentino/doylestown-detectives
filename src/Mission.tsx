@@ -37,6 +37,14 @@ export const sampleMission = createMission(
     ]
 )
 
+export const menuMission = createMission(
+    [
+        {
+            step: "menu"
+        }
+    ]
+)
+
 export const libraryMission = createMission(
     [
         {
