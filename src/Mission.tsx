@@ -166,8 +166,23 @@ export const libraryMission = createMission(
         },
         {
             step: "video",
-            //videoId: "",
-            text: "placeholder - finds magazine"
+            video: {
+                videoSource: "Library-Scene-4.mp4",
+                subtitles: [
+                    { startTime: 0, endTime: 2.7, text: "The trail leads to this penny press machine." },
+                    { startTime: 2.8, endTime: 4.5, text: "Oh I remember these things." },
+                    { startTime: 4.5, endTime: 8.3, text: "I wonder why the culprit wanted a big stretched out penny." },
+                    { startTime: 8.3, endTime: 10.1, text: "Hey, look at this!" },
+                    { startTime: 10.3, endTime: 13.6, text: "From the wear on this crank it looks like they used it a lot lately." },
+                    { startTime: 14, endTime: 16.3, text: "I wonder what they're doing with all those coins..." },
+                    { startTime: 17.5, endTime: 20.6, text: "Hey look! I found this really skinny book under the machine." },
+                    { startTime: 21, endTime: 23.2, text: "West! That magazine is our next clue!" },
+                    { startTime: 23.7, endTime: 25.0, text: "What's a magazine?" },
+                    { startTime: 25.2, endTime: 26.73, text: "Ugh. Gen Alpha." },
+                    { startTime: 27.2, endTime: 31.5, text: "Hey, it's ripped! Only a few pages of this magazine thing are here." },
+                    { startTime: 32, endTime: 36, text: "Let's get to the magazine section to find the rest of it!" }
+                  ]
+            }
         },
         {
             step: "image",
