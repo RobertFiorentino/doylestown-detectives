@@ -16,7 +16,7 @@ export default function MenuScreen({ storyStep, handleClick }: MenuScreenProps) 
             <div className="menu--container">
                 <div className="menu--container--buttons">
                     <ButtonWithSubheading
-                        buttonText="The Case Of The Sticky Fingers"
+                        buttonText="Main Street Mayhem"
                         subheadingText="Doylestown Boro Shops"
                         onClick={() => console.log("sticky fingers")} />
                     <ButtonWithSubheading
@@ -29,7 +29,7 @@ export default function MenuScreen({ storyStep, handleClick }: MenuScreenProps) 
                         onClick={() => handleClick(libraryMission)} />
                 </div>
                 <div className="menu--container--bottom">
-                    <button className="menu--bottom-button">Contact Us!</button>
+                    <button className="menu--bottom-button" onClick={handleContactUsClick}>Contact Us!</button>
                 </div>
             </div>
         </div>
@@ -47,4 +47,8 @@ const ButtonWithSubheading: React.FC<{
             <div className="menu--button--subheading">{subheadingText}</div>
         </div>
     );
+}
+
+const handleContactUsClick = () => {
+    window.location.href = "mailto:roguerabid@gmail.com";
 }

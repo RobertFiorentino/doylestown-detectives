@@ -45,7 +45,6 @@ button:disabled {
 .menuScreen {
     margin: 40px 30px 10px 30px;
     text-align: center;
-    background: greenyellow;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -63,7 +62,6 @@ button:disabled {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background: pink;
     padding-top: 30px;
 }
 

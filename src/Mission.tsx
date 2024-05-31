@@ -191,8 +191,26 @@ export const libraryMission = createMission(
         },
         {
             step: "video",
-            //videoId: "",
-            text: "placeholder - notices shelf"
+            video: {
+                videoSource: "Library-Scene-5.mp4",
+                subtitles: [
+                    { startTime: 0, endTime: 2.2, text: "Looking...looking...aha!" },
+                    { startTime: 2.1, endTime: 3.8, text: "Here's the rest of the magazine." },
+                    { startTime: 4.2, endTime: 5.9, text: "Bird Watching Monthly?" },
+                    { startTime: 6.0, endTime: 9, text: "Oh no! Bird feathers make me..." },
+                    { startTime: 9.1, endTime: 10.2, text: "Achoo!!" },
+                    { startTime: 10.3, endTime: 12.1, text: "It's not a real bird, Finn." },
+                    { startTime: 12.6, endTime: 15.0, text: "There must be something around here..." },
+                    { startTime: 15.5, endTime: 18.4, text: "Hey! What do you think you're doing?" },
+                    { startTime: 18.4, endTime: 19.5, text: "Excuse me??" },
+                    { startTime: 19.5, endTime: 21.4, text: "Where are your parents?" },
+                    { startTime: 21.5, endTime: 23.8, text: "That's a really good question..." },
+                    { startTime: 24.1, endTime: 25.0, text: "Achoo!" },
+                    { startTime: 25, endTime: 27, text: "Finn! Where did you go?" },
+                    { startTime: 28.5, endTime: 30.2, text: "Can you sneeze a little louder?" },
+                    { startTime: 30.6, endTime: 33, text: "Um...Achoo?" }
+                  ]
+            }
         },
         {
             step: "image",
