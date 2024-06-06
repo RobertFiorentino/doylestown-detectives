@@ -239,8 +239,31 @@ export const libraryMission = createMission(
         },
         {
             step: "video",
-            //videoId: "",
-            text: "placeholder - finds book"
+            video: {
+                videoSource: "Library-Scene-6.mp4",
+                subtitles: [
+                    { startTime: 0, endTime: 1.5, text: "Finn! Where are you?" },
+                    { startTime: 1.9, endTime: 3.3, text: "(Achoo!)" },
+                    { startTime: 3.4, endTime: 5.9, text: "Finn! Ok I need a better view." },
+                    { startTime: 6.8, endTime: 8.4, text: "Could you please cover your mouth?" },
+                    { startTime: 8.4, endTime: 11.0, text: "You're gonna knock the bookshelves over with that sneeze." },
+                    { startTime: 11.2, endTime: 13.3, text: "You're gonna knock them over with your climbing!" },
+                    { startTime: 13.3, endTime: 15.4, text: "Whatever. Did you find anything?" },
+                    { startTime: 15.6, endTime: 16.5, text: "Almost..." },
+                    { startTime: 16.8, endTime: 19.7, text: "Ry...(sniff sniff)...Sa...(sniff)" },
+                    { startTime: 19.7, endTime: 21.5, text: "Se...Achoo!" },
+                    { startTime: 21.7, endTime: 25.7, text: "A feather. And it's stuck in `Secrets of Clockmaking`." },
+                    { startTime: 25.9, endTime: 28.1, text: "That's it! The final piece of the puzzle!" },
+                    { startTime: 28.2, endTime: 29.5, text: "Yes! We did it!" },
+                    { startTime: 29.5, endTime: 30.9, text: "Wait, what do we do now?" },
+                    { startTime: 30.9, endTime: 33.7, text: "Isn't it obvious? We follow my nose." },
+                    { startTime: 34, endTime: 36.3, text: "I'm gonna need a nap after this mystery." },
+                    { startTime: 36.8, endTime: 37.3, text: "Achoo!" },
+                    { startTime: 39.8, endTime: 41.6, text: "I told you not to climb the shelves!" },
+                    { startTime: 41.6, endTime: 44, text: "Me? It was your sneeze that knocked them over." },
+                    { startTime: 44, endTime: 46, text: "Let's get out of here. Achoo!" }
+                  ]
+            }
         },
         {
             step: "image",
