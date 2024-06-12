@@ -290,6 +290,36 @@ export const libraryMission = createMission(
         },
         {
             step: "video",
+            video: {
+                videoSource: "Library-Scene-7.mp4",
+                subtitles: [
+                    { startTime: 0.7, endTime: 3.2, text: "There it...Achoo!...is!" },
+                    { startTime: 3.3, endTime: 5, text: "The culprit's grand plan!" },
+                    { startTime: 5.1, endTime: 8.3, text: "A peacock clock? What's this all about?" },
+                    { startTime: 8.4, endTime: 9.8, text: "Trace your steps backwards. " },
+                    { startTime: 10.1, endTime: 13.0, text: "The culprit was looking up how to make a clock." },
+                    { startTime: 13.1, endTime: 16.1, text: "Then he went to the bird magazine for a picture of a peacock." },
+                    { startTime: 16.2, endTime: 18.8, text: "Right! But feathers weren't enough." },
+                    { startTime: 18.8, endTime: 22, text: "They needed metal to make the frame of the clock." },
+                    { startTime: 22.1, endTime: 23.2, text: "The Penny Press Machine!" },
+                    { startTime: 23.3, endTime: 28, text: "But you can't just smush feathers and metal together and hope it forms a clock." },
+                    { startTime: 28.2, endTime: 30.4, text: "Right...they'd need something sticky." },
+                    { startTime: 29.9, endTime: 31.9, text: "Something like...?" },
+                    { startTime: 32.2, endTime: 34, text: "Honey! From the bees!" },
+                    { startTime: 34.2, endTime: 37.8, text: "We've got the evidence but we still don't have a motive or suspect." },
+                    { startTime: 38, endTime: 41.4, text: "Think about it...when did I first start sneezing?" },
+                    { startTime: 41.8, endTime: 44.7, text: "Right before we returned my overdue books." },
+                    { startTime: 44.8, endTime: 46.3, text: "When you were behind - GASP!" },
+                    { startTime: 46.4, endTime: 49.8, text: "That's right! The guy with blue feathers in his bag!" },
+                    { startTime: 50, endTime: 53.7, text: "We have evidence and a suspect, but not a motive yet..." },
+                    { startTime: 54, endTime: 57.2, text: "Oh I got this one. It takes an artist to know one." },
+                    { startTime: 57.4, endTime: 61.9, text: "The culprit didn't like the art already here. He must have thought his was better." },
+                    { startTime: 62.2, endTime: 68, text: "Evidence, suspect, motive, opportunity, we cracked the case!" }
+                  ]
+            }
+        },
+        {
+            step: "video",
             //videoId: "",
             text: "placeholder - finale"
         },
