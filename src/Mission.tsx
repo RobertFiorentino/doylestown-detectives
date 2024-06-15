@@ -97,16 +97,19 @@ export const libraryMission = createMission(
         {
             step: "image",
             image: "gold_panels.jpg",
-            text: "Go to the middle of the library by these gold panels. Find the the bees and ladybugs on the wall where the arrow's pointing and press OK."
+            text: "Go to the middle of the library by these gold panels. Find the the bees and ladybugs on the wall where the arrow's pointing and press OK.",
+            helpText: "Show the picture to a library staff member and ask where the gold panels are."
         },
         {
             step: "image",
             image: "bees.jpg",
-            text: "Look at the bees above the posters on the wall. How many bees (not ladybugs) do you see?"
+            text: "Look at the bees above the posters on the wall. How many bees (not ladybugs) do you see? Press OK when you have the answer.",
+            helpText: "If you don't know where the bee and ladybug wall is, it's the left wall as you walk toward the childrens play area in the back corner of the library. Ask a staff member if you have trouble finding it."
         },
         {
             step: "choice",
             text: "Look at the bees above the posters on the wall. How many bees (not ladybugs) do you see?",
+            helpText: "Remember to only count the bee decorations above the poster. If you aren't in the right spot, hit the Back button '<'.",
             choiceObject: {
                 choices: [
                     "1",
@@ -145,16 +148,18 @@ export const libraryMission = createMission(
             step: "image",
             image: "penny_machine_far.jpg",
             text: "Go near the library entrance to the Press A Penny machine.",
-            helpText: "Go to the main library entrance facing the Mercer Museum castle."
+            helpText: "Go to the main library entrance facing the Mercer Museum castle. Ask a staff member for help if you have trouble finding it."
         },
         {
             step: "image",
             image: "penny_machine_near.jpg",
-            text: "Look at the picture on the machine. What is written on this coin?"
+            text: "Look at the picture on the machine. What is written on this coin? Press OK when you have the answer.",
+            helpText: "There is a 4-letter word written on the center coin on the Press A Penny sign. Look at the arrow in the picture to see where. In the picture the word has been removed, you have to solve what it is!"
         },
         {
             step: "choice",
             text: "Look at the picture on the machine. What is written on this coin?",
+            helpText: "If you need to see what the question is asking, tap the Back button '<' to see the image again. There is a 4-letter word written on the center coin on the Press A Penny sign.",
             choiceObject: {
                 choices: [
                     "BOOK",
@@ -188,7 +193,8 @@ export const libraryMission = createMission(
         {
             step: "image",
             image: "magazines_far.jpg",
-            text: "Go to the Magazines section and press OK."
+            text: "Go to the Magazines section and press OK.",
+            helpText: "The magazines section is across from the golden panels from the beginning of the case, in the Fiction area. If you have trouble, ask a library staff member for directions."
         },
         {
             step: "video",
@@ -216,22 +222,26 @@ export const libraryMission = createMission(
         {
             step: "image",
             image: "magazines_near.jpg",
-            text: "Stand directly under the Magazines sign and press OK."
+            text: "Stand under the Magazines sign and press OK.",
+            helpText: "Try to stand so when you look up at the Magazines sign, it looks just like the picture. So you may need to actually be one step back rather than right under it."
         },
         {
             step: "image",
             image: "book_shelf_far.jpg",
-            text: "Turn left and walk up to this book shelf then press OK."
+            text: "Turn left and walk up to this book shelf then press OK.",
+            helpText: "If you're not sure which way to look, first face the big windows on the wall behind the magazines, then look left."
         },
         {
             step: "image",
             image: "book_shelf_near.jpg",
-            text: "Find the missing letters in this sign and press OK."
+            text: "Find the missing letters in this sign and press OK.",
+            helpText: "The little sign on the right will have letters, just like the sign on the left. In this picture the letters have been removed on purpose, that's what you have to solve!"
         },
         {
             step: "tile-game",
             centerVertically: true,
             text: "Touch the letters on the screen to match the letters in the right sign.",
+            helpText: "Find the four letters under 'Fiction' in the right sign on the end of the shelf. It will be two letters, a dash, and two more letters. Now tap the first letter here 'A' until it gets to the correct letter. Hint: The first letter is R! Once all four letters are correct, the OK button will be able to be pressed to continue.",
             winningText: "Correct! Press OK to continue ⬇️",
             tileGameObject: {
                 startingCombination: ["A", "B", "C", "D"],
@@ -269,16 +279,19 @@ export const libraryMission = createMission(
         {
             step: "image",
             image: "clock_far.jpg",
-            text: "Go to the children's play area. Look for a gold clock on the wall that is surrounded by a bird."
+            text: "Go to the children's play area. Look for a gold clock on the wall that is surrounded by a bird.",
+            helpText: "Go past those gold panels and bees from the beginning of the case and go to the children's area. Ask a library staff member if you need more directions."
         },
         {
             step: "image",
             image: "clock_near.jpg",
-            text: "What type of bird is at the bottom of the clock?"
+            text: "What type of bird is at the bottom of the clock? Press OK when you know the answer.",
+            helpText: "If you don't know where this is, hit the Back button '<' to see the image again and look where the arrow is pointing, near the window."
         },
         {
             step: "choice",
-            text: "What type of bird is at the bottom of the clock?",
+            text: "What type of bird is at the bottom of the clock? Press OK when you're ready to answer.",
+            helpText: "If you didn't find the clock, press the Back button '<' and try to find it. Ask a library staff member if you still need help finding it.",
             choiceObject: {
                 choices: [
                     "Flamingo",
