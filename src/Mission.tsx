@@ -40,7 +40,8 @@ export const sampleMission = createMission(
 export const menuMission = createMission(
     [
         {
-            step: "menu"
+            step: "menu",
+            isNavHidden: true
         }
     ]
 )
@@ -231,7 +232,7 @@ export const libraryMission = createMission(
             step: "tile-game",
             centerVertically: true,
             text: "Touch the letters on the screen to match the letters in the right sign.",
-            winningText: "Correct! Press OK to continue.",
+            winningText: "Correct! Press OK to continue ⬇️",
             tileGameObject: {
                 startingCombination: ["A", "B", "C", "D"],
                 correctCombination: ["R", "Y", "S", "I"]
@@ -314,7 +315,7 @@ export const libraryMission = createMission(
                     { startTime: 50, endTime: 53.7, text: "We have evidence and a suspect, but not a motive yet..." },
                     { startTime: 54, endTime: 57.2, text: "Oh I got this one. It takes an artist to know one." },
                     { startTime: 57.4, endTime: 61.9, text: "The culprit didn't like the art already here. He must have thought his was better." },
-                    { startTime: 62.2, endTime: 68, text: "Evidence, suspect, motive, opportunity, we cracked the case!" }
+                    { startTime: 62.4, endTime: 67.2, text: "Evidence, suspect, motive, opportunity, we cracked the case!" }
                   ]
             }
         },

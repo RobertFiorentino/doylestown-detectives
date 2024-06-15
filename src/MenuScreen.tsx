@@ -22,6 +22,7 @@ export default function MenuScreen({ storyStep, handleClick }: MenuScreenProps) 
                         onClick={() => handleClick(libraryMission)} />
                 </div>
                 <div className="menu--container--bottom">
+                    <button className="menu--bottom-button" onClick={handleResetGame}>Reset Game</button>
                     <button className="menu--bottom-button" onClick={handleContactUsClick}>Contact Us!</button>
                 </div>
             </div>
@@ -40,6 +41,11 @@ const ButtonWithSubheading: React.FC<{
             <div className="menu--button--subheading">{subheadingText}</div>
         </div>
     );
+}
+
+const handleResetGame = () => {
+    // Add other missions here as they're added
+    libraryMission.currentStepIndex = 0
 }
 
 const handleContactUsClick = () => {

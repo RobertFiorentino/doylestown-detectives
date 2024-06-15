@@ -81,6 +81,8 @@ button:disabled {
 
 .menu--container--bottom {
     display: flex;
+    flex-direction: column;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     flex: 1;
