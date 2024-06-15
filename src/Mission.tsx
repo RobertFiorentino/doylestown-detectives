@@ -296,7 +296,7 @@ export const libraryMission = createMission(
                     { startTime: 0.7, endTime: 3.2, text: "There it...Achoo!...is!" },
                     { startTime: 3.3, endTime: 5, text: "The culprit's grand plan!" },
                     { startTime: 5.1, endTime: 8.3, text: "A peacock clock? What's this all about?" },
-                    { startTime: 8.4, endTime: 9.8, text: "Trace your steps backwards. " },
+                    { startTime: 8.4, endTime: 9.8, text: "Trace your steps backwards." },
                     { startTime: 10.1, endTime: 13.0, text: "The culprit was looking up how to make a clock." },
                     { startTime: 13.1, endTime: 16.1, text: "Then he went to the bird magazine for a picture of a peacock." },
                     { startTime: 16.2, endTime: 18.8, text: "Right! But feathers weren't enough." },
@@ -320,13 +320,35 @@ export const libraryMission = createMission(
         },
         {
             step: "video",
-            //videoId: "",
-            text: "placeholder - finale"
+            video: {
+                videoSource: "Library-Scene-8.mp4",
+                subtitles: [
+                    { startTime: 0.1, endTime: 2.4, text: "Ok monsieur, enjoy your books!" },
+                    { startTime: 2.8, endTime: 6.1, text: "Don't let him take out anything else! HE is the culprit!" },
+                    { startTime: 6.3, endTime: 8.3, text: "Moi?? J'accuse!" },
+                    { startTime: 8.4, endTime: 10.5, text: "Hmm...Do you have any proof?" },
+                    { startTime: 10.7, endTime: 13.2, text: "Yeah we just did a whole montage about it." },
+                    { startTime: 14, endTime: 16.1, text: "It probably wasn't him." },
+                    { startTime: 16.2, endTime: 18.4, text: "He doesn't look like a real artist." },
+                    { startTime: 18.6, endTime: 23.3, text: "Right...he could never create the masterpieces that decorate these walls!" },
+                    { startTime: 23.5, endTime: 26.2, text: "You call zis art? Eez nothing!" },
+                    { startTime: 26.4, endTime: 28, text: "I am a ze real artist!" },
+                    { startTime: 29.8, endTime: 32.7, text: "Oh no, ACHOO!" },
+                    { startTime: 32.9, endTime: 37.4, text: "Oh I handle all sorts of thankless people, but I draw the line at defacing books!" },
+                    { startTime: 39.8, endTime: 42.4, text: "No! Le library card!" },
+                    { startTime: 43.5, endTime: 46.1, text: "Well thanks to the Doylestown Detectives we caught the culprit." },
+                    { startTime: 46.2, endTime: 49.8, text: "Yeah, and he probably knocked over a bunch of book shelves too!" },
+                    { startTime: 49.8, endTime: 50.5, text: "West!" },
+                    { startTime: 50.7, endTime: 51.7, text: "What? It's possible." },
+                    { startTime: 52, endTime: 55.2, text: "Consider your late fees erased. Is there anything else I can do for you?" },
+                    { startTime: 55.5, endTime: 61, text: "Um, do you have any allergy medicine?" }
+                  ]
+            }
         },
         {
             step: "image",
-            image: "",
-            text: "placeholder - mission complete"
+            image: "library-mission-complete.png",
+            music: "Mission-Theme.mp3"
         }
     ]
 )

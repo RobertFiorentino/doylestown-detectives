@@ -14,15 +14,8 @@ export default function MenuScreen({ storyStep, handleClick }: MenuScreenProps) 
         <div className="menuScreen">
             {storyStep.text && <h2>{storyStep.text}</h2>}
             <div className="menu--container">
+                <h2>Choose your mission:</h2>
                 <div className="menu--container--buttons">
-                    <ButtonWithSubheading
-                        buttonText="Main Street Mayhem"
-                        subheadingText="Doylestown Boro Shops"
-                        onClick={() => console.log("sticky fingers")} />
-                    <ButtonWithSubheading
-                        buttonText="Mercer's Mystery"
-                        subheadingText="Mercer's Museum, Michener, Library"
-                        onClick={() => console.log("mercer's mystery")} />
                     <ButtonWithSubheading
                         buttonText="The Library Litterbug!"
                         subheadingText="Doylestown Library"

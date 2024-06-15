@@ -70,7 +70,9 @@ button:disabled {
     height: 50px;
     width: 80%;
     align-self: center;
-    white-space: pre-line;
+    white-space: nowrap;
+    min-width: 200px;
+    text-align: center;
 }
 
 .menu--button--subheading {
