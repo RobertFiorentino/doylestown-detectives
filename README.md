@@ -1,30 +1,39 @@
-# React + TypeScript + Vite
+# Doylestown Detectives
+An interactive, location-based mystery game set in the local library — where players solve clues by exploring the real world environment.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="left">
+  <img src="public/images/library-mission.png" alt="Library Mission" width="300px"><br><br>
+  <p style="max-width: 700px; padding-bottom: 30px;">
+    <strong>Doylestown Detectives</strong> is a scavenger hunt style mystery game inspired by the "Duck Tales" game in the World Showcase at Disney World Epcot. Players follow the story starring local Doylestown kids (in cartoon form) exploring the building and answering real world clues. You must be physically present in the library to be able to answer the questions and progress to see the whole story!
+  </p>
 
-Currently, two official plugins are available:
+  <img src="public/images/screenshot_directions.png" alt="Directions" width="300px"><br><br>
+  <p style="max-width: 700px; padding-bottom: 30px;">
+    After you watch some of the story video, the hunt is on. The app tells you where to go in the library.
+  </p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  <img src="public/images/screenshot_bees.png" alt="Answer Question" width="300px"><br><br>
+  <p style="max-width: 700px; padding-bottom: 30px;">
+    Answer the question based on investigating the area in real life...
+  </p>
 
-## Expanding the ESLint configuration
+  <img src="public/images/screenshot_trail.png" alt="Progress Story" width="300px"><br><br>
+</div>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+And the hilarious story continues! You'll then be shown the next area to investigate and repeat until you've solved the mystery.
 
-- Configure the top-level `parserOptions` property like this:
+# Technologies Used
+- React
+- TypeScript
+- HTML/CSS
+- Adobe Character Animator / After Effects / Audition / Photoshop
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# How To Play
+1. Visit the Doylestown Library.
+2. Launch the game on a tablet or phone [https://doylestowndetectives.com](https://doylestowndetectives.com).
+3. (Optional) Add the game to the home screen to remove the address bar. Use that button to launch app!
+   - iOS - Tap the Share button at the bottom, then select Add to Home Screen.
+   - Android - Tap the three dots in the top right and tap Add to Home Screen.
+4. Select "The Library Litterbug!" mission.
+5. Watch the cartoon video. If you want to skip the video or go back, use the navigation buttons in the bottom left.
+6. Search the library to answer questions and solve the mystery!
